@@ -1,0 +1,13 @@
+$mainColor: #203A43;
+$mainBGColor: #fdfaf6;
+// $mainBGColor: #6e90c4;
+// $background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+$background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}

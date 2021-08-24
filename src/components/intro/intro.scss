@@ -1,0 +1,273 @@
+@import "../../global.scss";
+
+.intro {
+  background-color: $mainBGColor;
+  background-image: $background-image;
+  display: flex;
+  overflow: hidden;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .row {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .maincolumn {
+    display: flex;
+    flex-direction: column;
+    // flex-basis: 100%;
+    flex: 0 0 500px;
+    align-items: center;
+    margin-bottom: 10px;
+    // justify-content: center;
+  }
+
+  .maincolumn2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  .maincolumn3 {
+    display: flex;
+    flex-direction: column;
+    // flex-basis: 100%;
+    flex: 0 0 500px;
+    // align-items: center;
+    margin-bottom: 10px;
+    // justify-content: center;
+  }
+
+  .left {
+    // flex: 2;
+    overflow: hidden;
+    
+
+    .imageContainer {
+      width: 300px;
+      height: 300px;
+      // background-color: crimson;
+      border-radius: 50%;
+      border: 6px solid #ddd;
+      display: flex;
+      // align-items: flex-start;
+      align-items: center;
+      justify-content: center;
+      // float: right;
+      margin-top: 10px;
+      // margin-left: 0;
+      align-items: center;
+      align-content: center;
+      margin: 1.5rem;
+      @include mobile {
+        // margin-top: 20px;
+        align-items: flex-start;
+      }
+      img {
+        // height: 90%;
+        align-content: center;
+        @include mobile {
+          // height: 50%;
+        }
+      }
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+  .left2 {
+    // flex: 3;
+    position: relative;
+    // overflow: hidden;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+      h1 {
+        font-size: 3.75rem;
+        margin: 10px 0;
+        @include mobile {
+          font-size: 2.5rem;
+        }
+      }
+      h2 {
+        font-size: 2.188rem;
+      }
+      h3 {
+        font-size: 1.875rem;
+        @include mobile {
+          font-size: 1.25rem;
+        }
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+      h4 {
+        margin-top: 10px;
+        font-size: 18px;
+        button {
+          color: white;
+          padding: 7px;
+          background-color: $mainColor;
+          cursor: pointer;
+          border-radius: 7px;
+          font-weight: 500;
+          border: none;
+
+          &:hover {
+            background-color: crimson;
+            transform: scale(1.01);
+          }
+        }
+        button:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .right {
+    // flex: 4;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper {
+      width: auto;
+      height: auto;
+      // padding-left: 1.125rem;
+      padding: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1.5rem;
+      // margin-right: 1.5rem;
+      text-align: left;
+      
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+      h1 {
+        font-size: 2.75rem;
+        margin: 10px 0;
+        margin-bottom: 1rem;
+        @include mobile {
+          font-size: 1.25rem;
+        }
+      }
+      
+      p {
+        font-size: 1rem;
+        text-align: justify;
+        // text-justify: inter-word;
+        @include mobile {
+          font-size: 0.90rem;
+        }
+      }
+    .itemContainer {
+      // font-size: large;
+      // margin: 2rem;
+      // padding: 2rem;
+      // margin: 2rem; 
+       @include mobile {
+         // display: none;
+       }
+       
+     }
+    //   &:hover {
+    //     transform: scale(1.01);
+    //  }
+  //  }
+   
+     
+
+      
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .interests {
+    width: auto;
+    height: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    margin: 1.5rem;
+    text-align: left;
+
+    @include mobile {
+      padding-left: 0;
+      align-items: left;
+    }
+
+    
+    
+    h3 {
+      font-size: 1.875rem;
+      @include mobile {
+        font-size: 1.25rem;
+      }
+    }
+    ul{
+      line-height: 30px;
+
+    }
+
+    li{
+      display: flex;
+    }
+    h4 {
+      font-size: 1rem;
+      @include mobile {
+        font-size: 0.90rem;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      margin-left: 2.15rem;
+
+
+    }
+
+
+  }
+}
